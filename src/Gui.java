@@ -1,8 +1,6 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
-import java.util.List;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -16,7 +14,7 @@ public class Gui extends JFrame{
     ArrayList<JLabel> listChop = new ArrayList<>();
 
     public Gui() {
-        this.setTitle("5 triet gia an toi");
+        this.setTitle("5 Triết Gia ăn tối");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBounds(100, 100, 969, 660);
         this.setSize(800,500);
@@ -51,28 +49,28 @@ public class Gui extends JFrame{
             mainPanel.add(chop1);
         }
 
-        JLabel eatingLabel = new JLabel("EATING: ");
+        JLabel eatingLabel = new JLabel("ĐANG ĂN: ");
         eatingLabel.setBackground(Color.white);
         eatingLabel.setOpaque(true);
-        eatingLabel.setBounds(60, 10,57, 15);
+        eatingLabel.setBounds(60, 10,100, 15);
         mainPanel.add(eatingLabel);
 
         JLabel eatingColor = new JLabel();
         eatingColor.setBackground(Color.red);
         eatingColor.setOpaque(true);
-        eatingColor.setBounds(125, 10,30, 15);
+        eatingColor.setBounds(185, 10,30, 15);
         mainPanel.add(eatingColor);
 
-        JLabel thinkingLabel = new JLabel("THINKING: ");
+        JLabel thinkingLabel = new JLabel("ĐANG SUY NGHĨ: ");
         thinkingLabel.setBackground(Color.white);
         thinkingLabel.setOpaque(true);
-        thinkingLabel.setBounds(60, 36,66, 15);
+        thinkingLabel.setBounds(60, 36,120, 15);
         mainPanel.add(thinkingLabel);
 
         JLabel thinkingColor = new JLabel();
         thinkingColor.setBackground(Color.BLACK);
         thinkingColor.setOpaque(true);
-        thinkingColor.setBounds(125, 36,30, 15);
+        thinkingColor.setBounds(185, 36,30, 15);
         mainPanel.add(thinkingColor);
     }
     public void PhilosopherEating (int i) {

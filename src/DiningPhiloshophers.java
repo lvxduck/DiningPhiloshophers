@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DiningPhiloshophers {
 
     static int[] chopsticks;
@@ -7,10 +9,7 @@ public class DiningPhiloshophers {
         chopsticks = new int[philosophers.length];
         Gui frame = new Gui();
         frame.setVisible(true);
-
-        for (int i = 0; i < chopsticks.length; i++) {
-            chopsticks[i] = 1;
-        }
+        Arrays.fill(chopsticks, 1);
 
         for (int i = 0; i < philosophers.length; i++) {
             int leftChopstick= i;
@@ -34,13 +33,6 @@ public class DiningPhiloshophers {
             Thread t = new Thread(philosophers[i], "Triet gia " + (i + 1));
             t.start();
         }
-    }
-
-    static void wait(int index) throws InterruptedException {
-        while(chopsticks[index]<=0){
-            Thread.sleep(100);
-        };
-        chopsticks[index]-=1;
     }
 
     static void signal(int index){

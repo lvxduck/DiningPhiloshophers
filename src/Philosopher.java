@@ -18,7 +18,6 @@ public class Philosopher implements Runnable {
     public void run() {
         try {
             while (true) {
-                think();
                 DiningPhiloshophers.wait(leftFork);
                 frame.philosopherPickLeftFork(philNumber);
                 DiningPhiloshophers.wait(rightFork);
@@ -28,6 +27,7 @@ public class Philosopher implements Runnable {
                 frame.philosopherPutDownLeftFork(philNumber);
                 DiningPhiloshophers.signal(rightFork);
                 frame.philosopherPutDownRightFork(philNumber);
+                think();
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
