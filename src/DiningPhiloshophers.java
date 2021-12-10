@@ -35,6 +35,13 @@ public class DiningPhiloshophers {
         }
     }
 
+    static void wait(int index) throws InterruptedException {
+        while (chopsticks[index]<=0){
+            Thread.sleep(100);
+        }
+        chopsticks[index]-=1;
+    }
+
     static void signal(int index){
         chopsticks[index]+=1;
     }

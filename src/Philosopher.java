@@ -36,11 +36,11 @@ public class Philosopher implements Runnable {
 
     private void think() throws InterruptedException {
         frame.PhilosopherThinking(philNumber);
-        Thread.sleep(numGenerator.nextInt(3000)+2000);
+        Thread.sleep(numGenerator.nextInt(1000)+1000);
     }
 
     private void eat() throws InterruptedException {
         frame.PhilosopherEating(philNumber);
-        Thread.sleep(numGenerator.nextInt(3000)+2000);
+        Thread.sleep(numGenerator.nextInt(1000)+1000);
     }
 }
